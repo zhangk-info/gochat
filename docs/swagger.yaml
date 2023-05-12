@@ -1,0 +1,51 @@
+basePath: '{{.BasePath}}'
+definitions:
+  models.User:
+    properties:
+      avatar:
+        type: string
+      password:
+        type: string
+      userName:
+        type: string
+    type: object
+host: '{{.Host}}'
+info:
+  contact: {}
+  description: '{{.Description}}'
+  license: {}
+  title: '{{.Title}}'
+  version: '{{.Version}}'
+paths:
+  /:
+    get:
+      consumes:
+      - application/json
+      description: 访问首页
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '成功返回json {"message": "hello"}'
+          schema:
+            type: string
+      summary: 首页
+      tags:
+      - 首页
+  /users:
+    get:
+      consumes:
+      - application/json
+      description: 用户列表
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功
+          schema:
+            $ref: '#/definitions/models.User'
+            type: object
+      summary: 用户列表
+      tags:
+      - 用户
+swagger: "2.0"
