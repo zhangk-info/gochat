@@ -10,7 +10,7 @@ import (
 type User struct {
 	// gorm.Model创建了4个默认字段
 	gorm.Model
-	UserName string `valid:"emial"`
+	UserName string `valid:"emial~请输入正确的邮箱"`
 	Password string
 	Avatar   string
 }
