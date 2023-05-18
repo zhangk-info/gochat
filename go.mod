@@ -57,6 +57,7 @@ require (
 )
 
 require (
+	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2
 	github.com/gin-gonic/gin v1.9.0
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/spf13/viper v1.15.0
